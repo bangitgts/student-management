@@ -6,29 +6,29 @@ import { Route, Switch } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import Menu from "./components/Menu/menu";
 import { Component } from "react";
-import Information from "./components/Information/Information";
-import Manager from "./components/Manager/Manger";
+import routes from "./routes";
 class App extends Component {
-  // showContent(routes) {
-  //   var result = null;
-  //   if (routes.length > 0) {
-  //     result = routes.map((route, index) => {
-  //       return (
-  //         <Route
-  //           key={index}
-  //           path={route.path}
-  //           exact={route.exact}
-  //           component={route.main}
-  //         />
-  //       );
-  //     });
-  //   }
-  //   return <Switch>{result}</Switch>;
-  //}
+  showContent(routes) {
+    var result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        );
+      });
+    }
+    return <Switch>{result}</Switch>;
+  }
   render() {
     return (
       <Router>
         <div className="container">
+
           {/* top */}
           <nav className="navbar navbar-default" role="navigation">
             {/* Brand and toggle get grouped for better mobile display */}
@@ -59,14 +59,15 @@ class App extends Component {
           </ul> */}
               <Menu />
             </div>
+            <br></br>
+            {this.showContent(routes)}
             {/* /.navbar-collapse */}
           </nav>
           {/* homegape */}
-         <Information/>
-          {/* manager project */}
-         <Manager/>
+      
         </div>
       </Router>
+      
     );
   }
 }

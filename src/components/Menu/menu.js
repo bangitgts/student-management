@@ -12,6 +12,11 @@ const menus = [
     to: "/manager",
     exact: false,
   },
+  {
+    name: "About",
+    to: "/about",
+    exact: false,
+  },
 ];
 const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
   return (

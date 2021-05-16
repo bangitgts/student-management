@@ -1,20 +1,19 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Component } from "react";
-import ManagerList from "../MangerList/MangerList";
-
+import { Link } from "react-router-dom";
 class Manager extends Component {
   render() {
     return (
       <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div className="panel panel-primary">
           <div className="panel-heading">
-            <h3 className="panel-title">Panel title</h3>
+            <h3 className="panel-title">Information</h3>
           </div>
           <div className="panel-body">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <button type="button" className="btn btn-primary">
-                <span className="fa fa-plus mr-5" />
-                Thêm Công Việc
-              </button>
+              <Link to="/student/add" className="btn btn-danger">
+                Add Student
+              </Link>
               <div className="row mt-15">
                 <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                   <div className="input-group">
@@ -62,7 +61,7 @@ class Manager extends Component {
                           </span>
                         </a>
                       </li>
-                     
+
                       <li role="separator" className="divider" />
                       <li>
                         <a role="button">Trạng Thái Kích Hoạt</a>
@@ -88,7 +87,6 @@ class Manager extends Component {
                         <th className="text-center">Điểm trung bình</th>
                       </tr>
                     </thead>
-                    <ManagerList/>
                   </table>
                 </div>
               </div>
@@ -99,6 +97,5 @@ class Manager extends Component {
     );
   }
 }
-
 
 export default Manager;

@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Component } from "react";
+import Information from "../../components/Information/Information";
 
 class Homepage extends Component {
   render() {
     //TODO
     return (
-        <div class="container">
-            <h1>Day la Homapge</h1>
-        </div>
+        <Information/>
     );
   }
 }
