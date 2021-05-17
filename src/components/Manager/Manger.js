@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Component } from "react";
 import ManagerList from "../MangerList/MangerList";
 
@@ -41,7 +42,7 @@ class Manager extends Component {
                       aria-haspopup="true"
                       aria-expanded="true"
                     >
-                      Sắp Xếp{" "}
+                      Sắp Xếp{""}
                       <span className="fa fa-caret-square-o-down ml-5" />
                     </button>
                     <ul

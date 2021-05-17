@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { Component } from "react";
-
+import { connect } from "react-redux"
+import Homepage from "../../pages/Homepage/Homepage";
 class Information extends Component {
   render() {
     return (
@@ -20,7 +21,7 @@ class Information extends Component {
                   />
                 </div>
                 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                  <p>1</p>
+                  <p>{this.props.a}</p>
                   <p>1</p>
                   <p>1</p>
                   <p>1</p>
@@ -39,7 +40,7 @@ class Information extends Component {
           <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div className="panel panel-info">
               <div className="panel-heading">
-                <h3 className="panel-title">Panel title</h3>
+                <h3 className="panel-title">Panel Title</h3>
               </div>
               <div className="panel-body">Panel content</div>
             </div>
@@ -49,4 +50,5 @@ class Information extends Component {
     );
   }
 }
+
 export default Information;
